@@ -1,0 +1,619 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body header {
+  background-color: rgb(255, 255, 255);
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 95px;
+}
+body header.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+body header div.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+}
+body header div.logo img {
+  width: 134px;
+  height: 65px;
+}
+body header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+}
+body header nav ul {
+  display: flex;
+  gap: 100px;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: rgb(128, 128, 128);
+}
+body header nav ul li a:hover {
+  color: rgba(26, 216, 211, 0.8);
+}
+body header nav ul li img {
+  width: 23px;
+  height: 23px;
+  margin-top: 8px;
+}
+body main section.test {
+  position: fixed;
+  right: 0;
+  bottom: 20%;
+  z-index: 10;
+}
+body main section.test img {
+  width: 78px;
+  height: 69px;
+  opacity: 0.8;
+}
+body main section.section1 {
+  height: calc(100vh - 95px);
+  overflow: hidden;
+  position: relative;
+  background-image: url("./img/key-visual.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body main section.section1 h1 {
+  color: white;
+  font-size: 38px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+body main section.section1 p {
+  color: white;
+  font-size: 24px;
+  letter-spacing: 10px;
+}
+body main section.section1 img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 180px;
+  transform: rotate(90deg);
+}
+body main section.section2 {
+  position: relative;
+  height: 100vh;
+  background-image: url("./img/second-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 背景固定 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body main section.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 透明黑色遮罩 */
+  z-index: 1;
+}
+body main section.section2 p {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+body main section.section2 button {
+  margin-top: 15px;
+  color: rgba(26, 216, 211, 0.8);
+  z-index: 2;
+  border: solid 1px rgba(26, 216, 211, 0.8);
+  font-size: 18px;
+  padding: 7px 27px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease; /* 平滑過渡 */
+}
+body main section.section2 button:hover {
+  transform: scale(1.2); /* 放大 1.2 倍 */
+}
+body main section.section3 {
+  position: relative;
+  height: 100vh;
+  background-image: url("./img/third-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 背景固定 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body main section.section3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 透明黑色遮罩 */
+  z-index: 1;
+}
+body main section.section3 p {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+body main section.section3 button {
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: rgba(26, 216, 211, 0.8);
+  z-index: 2;
+  padding: 5px;
+  border: solid 1px rgba(26, 216, 211, 0.8);
+  font-size: 18px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease; /* 平滑過渡 */
+}
+body main section.section3 button:hover {
+  transform: scale(1.2); /* 放大 1.2 倍 */
+}
+body main section.section4 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url("./img/15.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body main section.section4 section.section4-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 336px;
+  height: 445px;
+  overflow: hidden;
+  position: relative;
+  background-image: url("./img/FE_white.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 {
+  position: relative;
+  top: 40px;
+  left: 150px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 div.pen img {
+  width: 41px;
+  height: 42.5px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 p {
+  color: rgba(26, 216, 211, 0.8);
+  font-size: 24px;
+  margin-top: 15px;
+  position: relative;
+  right: 10px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 div.line {
+  width: 55px;
+  border-bottom: solid rgba(26, 216, 211, 0.8);
+  margin-top: 30px;
+  position: relative;
+  right: 13px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  top: 55px;
+  left: 85px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-2 div.white1-2-1 {
+  position: relative;
+  left: 25px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white1 button {
+  position: relative;
+  top: 73px;
+  left: 100px;
+  width: 135px;
+  color: white;
+  background-color: rgba(26, 216, 211, 0.8);
+  border: solid rgba(26, 216, 211, 0.8);
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 18px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 336px;
+  height: 445px;
+  overflow: hidden;
+  position: relative;
+  background-image: url("./img/FE_white.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 {
+  position: relative;
+  top: 40px;
+  left: 150px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 div.pen img {
+  width: 41px;
+  height: 42.5px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 p {
+  color: rgba(26, 216, 211, 0.8);
+  font-size: 24px;
+  margin-top: 15px;
+  position: relative;
+  right: 19px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 div.line {
+  width: 55px;
+  border-bottom: solid rgba(26, 216, 211, 0.8);
+  margin-top: 30px;
+  position: relative;
+  right: 10px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  top: 55px;
+  left: 100px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-2 div.white2-2-1 {
+  position: relative;
+  left: 8px;
+}
+body main section.section4 section.section4-1 div.section4-1-1 div.white2 button {
+  position: relative;
+  top: 75px;
+  left: 100px;
+  width: 135px;
+  color: white;
+  background-color: rgba(26, 216, 211, 0.8);
+  border: solid rgba(26, 216, 211, 0.8);
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 18px;
+}
+body main section.section5 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url("./img/five-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body main section.section5 section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: 150px;
+}
+body main section.section5 section div.section5-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+body main section.section5 section div.section5-1 p {
+  font-size: 25px;
+}
+body main section.section5 section div.section5-1 div.line {
+  width: 30px;
+  border-bottom: solid 3px white;
+  position: relative;
+  left: 545px;
+  margin-top: 15px;
+}
+body main section.section5 section div.section5-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 18px;
+  position: relative;
+  left: 250px;
+  width: 60%;
+}
+body main section.section5 section div.section5-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 18px;
+  position: relative;
+  left: 250px;
+  width: 60%;
+}
+body footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+}
+body footer section.section1 {
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+}
+body footer section.section1 img {
+  width: 36px;
+  height: 46px;
+  transition: transform 0.8s ease;
+}
+body footer section.section1 img:hover {
+  transform: scale(1.3);
+}
+body footer section.section2 ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ececec;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+body footer section.section2 ul li {
+  list-style-type: none;
+  color: rgb(128, 128, 128);
+}
+body footer section.section2 ul li a {
+  text-decoration: none;
+  color: rgb(128, 128, 128);
+}
+body footer section.section2 ul li span.text1 {
+  color: rgba(26, 216, 211, 0.8);
+  margin-right: 15px;
+}
+body footer section.section2 ul li span.text2 {
+  letter-spacing: 3px;
+}
+body footer section.section2 ul li img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 500px) {
+  body header div.logo {
+    margin-left: 5px;
+  }
+  body header nav {
+    margin-right: 30px;
+  }
+  body header nav ul {
+    gap: 15px;
+  }
+  body header nav ul li {
+    margin-right: -15px;
+  }
+  body main section.section4 {
+    height: 120vh;
+  }
+  body main section.section4 section.section4-1 {
+    flex-direction: column;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 {
+    width: 224px;
+    height: 336px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 {
+    position: relative;
+    top: 50px;
+    left: 100px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 p {
+    font-size: 15px;
+    position: relative;
+    right: 7px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 div.line {
+    width: 45px;
+    margin-top: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-2 {
+    gap: 5px;
+    top: 45px;
+    left: 45px;
+    font-size: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 button {
+    width: 100px;
+    padding: 1px;
+    font-size: 15px;
+    top: 47px;
+    left: 65px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 {
+    width: 224px;
+    height: 336px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 {
+    position: relative;
+    top: 50px;
+    left: 100px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 p {
+    font-size: 15px;
+    position: relative;
+    right: 7px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 div.line {
+    width: 49px;
+    margin-top: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-2 {
+    gap: 5px;
+    top: 45px;
+    left: 45px;
+    font-size: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 button {
+    width: 100px;
+    padding: 1px;
+    font-size: 15px;
+    top: 47px;
+    left: 65px;
+  }
+  body main section.section5 section {
+    top: 250px;
+    right: 150px;
+  }
+  body main section.section5 section div.section5-1 {
+    position: relative;
+    left: 150px;
+  }
+  body main section.section5 section div.section5-1 div.line {
+    position: relative;
+    left: 200px;
+  }
+  body footer section.section2 {
+    background-color: #ececec;
+  }
+  body footer section.section2 ul {
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 30px;
+    padding-bottom: 0px;
+  }
+  body footer section.section2 ul li.icon {
+    width: 65px;
+    position: relative;
+    bottom: 39px;
+    left: 325px;
+  }
+}
+@media (max-width: 745px) {
+  body header nav ul {
+    gap: 50px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 {
+    width: 224px;
+    height: 336px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 {
+    position: relative;
+    top: 50px;
+    left: 100px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 p {
+    font-size: 15px;
+    position: relative;
+    right: 7px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-1 div.line {
+    width: 45px;
+    margin-top: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 div.white1-2 {
+    gap: 5px;
+    top: 45px;
+    left: 45px;
+    font-size: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white1 button {
+    width: 100px;
+    padding: 1px;
+    font-size: 15px;
+    top: 47px;
+    left: 65px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 {
+    width: 224px;
+    height: 336px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 {
+    position: relative;
+    top: 50px;
+    left: 100px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 p {
+    font-size: 15px;
+    position: relative;
+    right: 7px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-1 div.line {
+    width: 49px;
+    margin-top: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 div.white2-2 {
+    gap: 5px;
+    top: 45px;
+    left: 45px;
+    font-size: 15px;
+  }
+  body main section.section4 section.section4-1 div.section4-1-1 div.white2 button {
+    width: 100px;
+    padding: 1px;
+    font-size: 15px;
+    top: 47px;
+    left: 65px;
+  }
+}/*# sourceMappingURL=style.css.map */
