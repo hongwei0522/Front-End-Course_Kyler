@@ -6,6 +6,24 @@ $themeColor :rgba(26, 216, 211, 0.8);
 }
 
 body{
+    .intro-screen {
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100%;             
+    height: 100vh;           
+    background-color: rgb(235, 235, 235); 
+
+    display: flex;           
+    justify-content: center;
+    align-items: center;     
+
+    z-index: 1000;    
+    }
+    .intro-screen.slide-up {
+    transform: translateY(-100%);
+    transition: transform 1s ease-in-out;
+    }
     header{
         background-color: rgba(255, 255, 255, 1); // 初始白色不透明
         transition: background-color 0.3s ease; // 過渡效果
@@ -50,12 +68,76 @@ body{
                         width: 23px;
                         height: 23px;
                         margin-top: 8px;
+                        transition: transform 0.5s ease;
+                        &:hover{
+                            transform: scale(1.3);
+                        }
                     }
                }
             }
         }
     }
+    .search-panel{
+        display: none;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        height: 50vh; 
+        flex-direction: column;
+        align-items: center;
+        background-color: #fbfbfb;
+        .search-title{
+            color: rgb(26, 216, 211);
+            font-size: 18px;
+            letter-spacing: 5px;
+            margin-top: 50px;
+        }
+        .search-box{
+            display: flex;
+            gap: 5px;
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 15px;
+            width: 60%;
+            padding: 10px 0px 10px 10px;
+            margin-top: 20px;
+            .search-input{
+                border-radius: 15px;
+                border:solid 5px #ffffff;
+                background-color: #ffffff;
+                width: 90%;
+            }
+            .search-mic{
+                width: 30px;
+            }
+            .search-btn{
+                width: 30px;
+                height: 30px;
+                margin-left: 5px;
+                transition: transform 0.5s ease;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
 
+    }
+    .search-panel.active {
+    display: flex;
+    }   
+    .shadow-mask {
+        display: none;
+        position: fixed;
+        top: 50vh;                  // 從視窗一半開始貼上
+        left: 0;
+        width: 100%;
+        height: 50vh;               // 覆蓋下半部
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;                 
+        pointer-events: none;
+    }
+    .shadow-mask.active{
+        display: block;
+    }
     main{
         section.test{
             position: fixed;
@@ -492,45 +574,8 @@ body{
     }
 }
 
-// @media (max-width: 500px){
-//     body{
-//         header{
-//             div.logo{
-//                 margin-left: 5px;
-//             }
-//             nav{
-//                 margin-right: 30px;
-//                 ul{
-//                     gap: 15px;
-//                     li{
-//                         margin-right:-15px;
-//                     }
-//                 }
-//             }
-
-//         }
-
-//         main{
-//             section.section4{
-//                 height: 90vh;
-//             }
-//         }
-//     }
-// }
 @media (max-width: 500px) {
     body {
-        // header{
-        //     div.logo{
-        //         margin-left: 30px;
-        //     }
-        //     nav{
-        //         margin-right: 30px;
-        //         ul{
-        //             gap: 30px;
-        //         }
-        //     }
-        // }
-
         header{
             div.logo{
                 margin-left: 5px;
