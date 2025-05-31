@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="intro-screen">
+        <img src="./img/FE_logo-4.png" alt="前端轉職logo">
+    </div>
     <header>
         <div class="logo">
             <a href=""><img src="./img/FE_logo-4.png" alt="前端轉職logo"></a>
@@ -16,11 +19,19 @@
                 <li><a href="">探索</a></li>
                 <li><a href="">技能樹</a></li>
                 <li><a href="">登入</a></li>
-                <li><img src="./img/FE_search_green.png" alt="搜尋欄"></li>
+                <li><img src="./img/FE_search_green.png" alt="搜尋欄" class="search-toggle"></li>
             </ul>
         </nav>
     </header>
-
+    <div class="search-panel">
+        <div class="search-title">SEARCH</div>
+        <div class="search-box">
+            <input type="text" class="search-input">
+            <img src="./img/microphone.svg" alt="" class="search-mic">
+            <img src="./img/FE_search_green.png" alt="搜尋欄" class="search-btn">
+        </div>
+    </div>
+    <div class="shadow-mask"></div>
     <main>
         <section class="test">
                 <img src="./img/FE_test_go.png" alt="">
@@ -97,10 +108,9 @@
         </section>
 
     </main>
-
     <footer>
         <section class="section1">
-            <img src="./img/FE_TOP.png" alt="">
+            <img src="./img/FE_TOP.png" alt="" class="scroll-top" tabindex="-1">
         </section>
         <section class="section2">
             <ul>
@@ -115,11 +125,7 @@
             </ul>
         </section>
     </footer>
-    <script src="app.js"></script>
-    <title>Front-Enter</title>
-    <link rel="stylesheet" href="./styles.css">
+    <script src="script.js"></script>
+
 </head>
-<body>
-    <h1>Front-Enter</h1>
-</body>
 </html>
